@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Using HTML & CSS</title>
+
+      <!-- Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap"
+          rel="stylesheet">
+
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body{
+            background-image: url(./images/back.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .main-box{
+            position:relative;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .main-box .sidebar{
+            position: fixed;
+            height: 100vh;
+            width: 280px;
+            background:rgba(255,255,255,0.1);
+            box-shadow: 0 0 6px rgba(255,255,255,0.5);
+            transition: all 0.3 ease;
+        }
+
+
+        .sidebar .logo{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+            font-size: 22px;
+            height: 60px;
+            font-weight: 600;
+            box-shadow: 0 0 6px rgba(255,255,255,0.5);
+        }
+
+        .drawer li{
+            margin-top: 6px;
+            padding: 10px 20px;
+            transition: all 0.3 ease;
+        }
+
+        .drawer li:hover{
+            border-left: 1px solid #fff;
+            box-shadow: 0 0 4px rgba(255,255,255,0.5);
+        }
+
+        .drawer a{
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .drawer i{
+            color: #fff;
+            font-size: 20px;
+            margin-right: 8px;
+        }
+
+        .sidebar .social-media{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            /* border: 1px solid black; */
+            box-shadow: 0 0 6px rgba(255,255,255,0.5);
+            height: 20%;
+        }
+
+        .social-media a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: yellow; */
+            /* border-radius: 50%; */
+            height: 34px;
+            width: 34px;
+            text-decoration: none;
+            margin-right: 24px;
+        }
+
+        .social-media i{
+            color: #fff;
+            font-size: 34px;
+            font-weight: 500;
+        }
+
+        #check{
+            display: none;
+        }
+
+        .main-box .bars i{
+            position:absolute;
+            top: 10;
+            left: 10;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .logo .title{
+            padding: 20px;
+        }
+
+        .main-box .cross i{
+            position: relative;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+            padding: 20px;
+            z-index: 0;
+        }
+
+        #check:checked ~ .sidebar{
+            display: none;
+        }
+
+        #check:checked ~ .bars i{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-box">
+        <input type="checkbox" id="check">
+        <div class="bars">
+            <label for="check">
+                <i class='bx bx-menu' ></i>
+            </label>
+        </div>
+        <div class="sidebar">
+            <div class="logo">
+                <h1 class="title">NavBar</h1>
+                <div class="cross">
+                    <label for="check">
+                        <i class='bx bx-x' ></i>
+                    </label>
+                </div>
+            </div>
+            <ul class="drawer">
+                <li><a href="#"> <i class='bx bxs-dashboard'></i> Dashboard</a></li>
+                <li><a href="#"> <i class='bx bx-link'></i> Shortcuts</a></li>
+                <li><a href="#"> <i class='bx bxs-calendar' ></i> Events</a></li>
+                <li><a href="#"> <i class='bx bxs-user-pin' ></i> About</a></li>
+                <li><a href="#"> <i class='bx bxs-food-menu' ></i></i> Services</a></li>
+                <li><a href="#"> <i class='bx bxs-contact' ></i> Contact</a></li>
+                <li><a href="#"> <i class='bx bxl-firefox' ></i></i> Refferences</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="#"><i class='bx bxl-facebook-square' ></i></a>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+                <a href="#"><i class='bx bxl-instagram' ></i></a>
+                <a href="#"><i class='bx bxl-reddit' ></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
