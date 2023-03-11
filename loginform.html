@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+     <!-- Font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link
+         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap"
+         rel="stylesheet">
+ 
+     <!-- Icon -->
+     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+
+     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+
+     <!-- Style -->
+     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins",sans-serif;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1abc9c;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .loginbox{
+            width: 380px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        .loginbox .title{
+            height: 80px;
+            background-color: #16a085;
+            border-radius: 5px 5px 0 0;
+            font-size: 30px;
+            font-weight: 600;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-form{
+            padding: 30px 30px;
+            text-align: center;
+        }
+
+        .login-form h5 a{
+            color: #1abc9c;
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+        .login-form .row{
+            height: 45px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .login-form .row input{
+            width: 100%;
+            height: 100%;
+            padding-left: 60px;
+            border-radius: 5px;
+            border: 1px solid lightgray;
+        }
+
+        .login-form .row i{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #16a085;
+            width: 47px;
+            height: 100%;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px 0px 0px 5px;
+        }
+
+        .login-form .row.button{
+            margin-top: 15px;
+
+        }
+        .login-form .row.button input{
+            padding-left: 0;
+            background-color: #16a085;
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+        }
+     </style>
+</head>
+<body>
+    <div class="container">
+        <div class="loginbox">
+            <div class="title">
+                <span>Login Form</span>
+            </div>
+            <div class="login-form">
+                <form>
+                    <div class="row">
+                        <i class="fi fi-sr-user"></i>
+                        <input type="text" name="name" id="" placeholder="Full Name">
+                    </div>
+                    <div class="row">
+                        <i class="fi fi-sr-envelope"></i>
+                        <input type="email" name="email" id="" placeholder="Email Id or Phone">
+                    </div>
+                    <div class="row">
+                        <i class="fi fi-ss-lock"></i>
+                        <input type="password" name="email" id="" placeholder="Password">
+                    </div>
+                    <h5>Forget Password? &nbsp; <a href="#">Reset Password</a></h5>
+                    <div class="row button">
+                        <input type="submit" value="Login">
+                    </div>
+                    <h5>New User?  &nbsp; <a href="#"> Sign Up</a></h5>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
