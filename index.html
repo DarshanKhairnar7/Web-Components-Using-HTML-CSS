@@ -6,238 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Components Using HTML & CSS</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-
-        }
-
-        .uni-pad{
-            padding: 0px 10%;
-        }
-
-        .container {
-            background-color: #8ba0ce;
-            height: 100%;
-            padding-top: 90px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            z-index:1;
-            box-sizing: border-box;
-        }
-
-        .container .head {
-            background-color:#BFACE2;
-            color: #413543;
-            position: fixed;
-            z-index: 5;
-            top: 0;
-            width: 100%;
-            padding: 10px 0px;
-            text-align: center;
-            box-shadow: 0px 10px 50px #3E54AC;
-        }
-
-
-
-        .banner{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            /* border: 2px solid black; */
-            width: 71%;
-        }
-
-
-        .projects .title{
-            /* border: 2px solid red; */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            color: #faf9fb;
-            margin-top: 20px;
-        }
-
-        .banner .img img{
-            width: 200px;
-            /* border: 2px solid black; */
-        }
-
-        #pro{
-            clip-path: circle(48% at 50%);
-        }
-
-        .banner .text {
-            text-align: center;
-            width: 50%;
-            color: #413543;
-            position: relative;
-            z-index: 1;
-        }
-
-        .container .content {
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 18px;
-        }
-
-        .container .content .card {
-            width: 48%;
-            /* padding: 20px; */
-            /* margin: 20px; */
-            box-sizing: border-box;
-            /* border: 2px solid black; */
-            border-radius: 10px;
-            background-color:#BFACE2;
-            transition: all 0.3s ease;
-        }
-
-        .card:hover{
-            box-shadow: 10px 10px 50px #3E54AC;
-        }
-
-        .container .content .card img {
-            width: 100%;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
-        .card-title{
-            /* border: 2px solid black; */
-            text-align: center;
-            padding-top: 10px;
-            font-size: 18px;
-            color: #413543;
-            font-weight: 800;
-            transition: all 0.3s ease;
-        }
-
-        .card-title:hover{
-            color: #334bab;
-        }
-
-        .container .content .card .link{
-            /* text-align: center; */
-            /* margin:20px; */
-            /* padding: 8px 10px; */
-            padding: 10px 35%;
-            /* border: 2px solid red; */
-            display: flex;
-            justify-content:space-between;
-            align-items: center;
-
-        }
-
-
-        .container .content .card .link a{
-            text-decoration: none;
-            color: #413543;
-            font-size: 14px;
-            /* background-color:#849bf7; */
-            border: 1px solid #413543;
-            border-radius: 10px;
-            padding: 3px 10px;
-            /* width: 20%; */
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .container .content .card .link a:hover{
-            border: none;
-            background-color: #3E54AC;
-            color: #fff;
-        }
-
-        @media screen and (max-width:940px) {
-            .uni-pad{
-                padding: 0px 6%;
-            }
-        }
-
-
-        @media screen and (max-width:940px) {
-            .uni-pad{
-                padding: 0px 6%;
-            }
-        }
-
-        @media screen and (max-width:870px) {
-            .uni-pad{
-                padding: 0;
-            }
-
-
-            .container .content .card .link 
-            {
-                padding: 10px 25%;
-            }
-
-
-        }
-
-        @media screen and (max-width:768px) {
-            .container .banner{
-                width: 90%;
-            }
-        }
-
-        @media screen and (max-width:564px) {
-
-            .uni-pad{
-                padding: 0;
-            }
-            .container{
-                box-sizing: content-box;
-            }
-            .container .content .card{
-                width: 100%;
-                /* margin: 0; */
-                /* margin-bottom: 20px; */
-            }   
-            
-            .container .banner{
-                flex-direction: column;
-                width: 90%;
-            }
-
-            .container .banner .text{
-                width: 90%;
-            }
-
-            /* .container .projects .title{
-                width: 90%;
-            } */
-        }
-
-        @media screen and (max-width:440px) {
-            .uni-pad{
-                padding: 0;
-            }
-
-
-        }
-
-        @media screen and (max-width:375px) {
-            .uni-pad{
-                padding: 0;
-            }
-
-            .container .content .card .link
-            {
-                padding: 10px 30%;
-            }
-
-        }
-    </style>
+    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -247,7 +17,7 @@
         </div>
         <div class="banner uni-pad">
             <div class="img">
-                <img src="./images/Profile1.jpg" alt="" id="pro">
+                <img src="./img/Profile1.jpg" alt="" id="pro">
             </div>
             <div class="text">
                 <h1>
@@ -265,7 +35,7 @@
                 <div class="card">
                     <div class="img-holder">
                        <a href="./profilecard.html">
-                        <img src="./images/profilecard.png" alt="">
+                        <img src="./img/profilecard.png" alt="">
                     </a> 
                     </div>
                     <div class="card-title">
@@ -279,7 +49,7 @@
                 <div class="card">
                     <div class="img-holder">
                         <a href="./landingpage.html">
-                            <img src="./images/landingpage.png" alt="">
+                            <img src="./img/landingpage.png" alt="">
                         </a>
                     </div>
                     <div class="card-title">
@@ -293,7 +63,7 @@
                 <div class="card">
                     <div class="img-holder">
                         <a href="./sidebar.html">
-                        <img src="./images/sidebar.png" alt="">
+                        <img src="./img/sidebar.png" alt="">
                         </a>
                     </div>
                     <div class="card-title">
@@ -307,7 +77,7 @@
                 <div class="card">
                     <div class="img-holder">
                         <a href="./loginform.html">
-                            <img src="./images/loginform.png" alt="">
+                            <img src="./img/loginform.png" alt="">
                         </a>
                     </div>
                     <div class="card-title">
@@ -321,7 +91,7 @@
                 <div class="card">
                     <div class="img-holder">
                         <a href="./flippingcard.html">
-                            <img src="./images/flipping.png" alt="">
+                            <img src="./img/flipping.png" alt="">
                         </a>
                     </div>
                     <div class="card-title">
@@ -335,7 +105,7 @@
                 <div class="card">
                     <div class="img-holder">
                         <a href="./profilecard.html">
-                        <img src="./images/profilecard.png" alt="">
+                        <img src="./img/profilecard.png" alt="">
                         </a>
                     </div>
                     <div class="card-title">
