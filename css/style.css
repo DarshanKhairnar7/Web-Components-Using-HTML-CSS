@@ -9,7 +9,7 @@
 }
 
 .container {
-    background-color: #8ba0ce;
+    background-color: #bbbcc0;
     height: 100%;
     padding-top: 90px;
     display: flex;
@@ -22,7 +22,7 @@
 }
 
 .container .head {
-    background-color:#BFACE2;
+    background-color:#bbbcc0;
     color: #413543;
     position: fixed;
     z-index: 5;
@@ -30,7 +30,7 @@
     width: 100%;
     padding: 10px 0px;
     text-align: center;
-    box-shadow: 0px 10px 50px #3E54AC;
+    box-shadow: 0px 10px 50px #888b96;
 }
 
 
