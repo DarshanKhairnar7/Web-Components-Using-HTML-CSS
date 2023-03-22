@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Lato",sans-serif;
+            box-sizing: border-box;
+        }
+
+        html{
+            font-size: 16px;
+        }
+
+        #container{
+            background-color: #FFFFFF;
+        }
+
+        #hero{
+            background-image: url("../img/developer.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position:center ;
+            min-height: 600px;
+            display: flex;
+            justify-content: center;
+            
+            
+        }
+
+        #hero .text{
+            color: #FFFFFF;
+            margin-top: 80px;
+            padding: 0px 40px;
+            
+        }
+
+        
+        #hero .text #hi{
+            font-size: 4rem;
+            font-weight: 300;
+        }
+
+        #hero .text h2{
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        #hero .text h1{
+            font-size: 3rem;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        #headline{
+            /* height: ; */
+            background-color: #161619;
+            display: flex;
+            justify-content: center;
+        }
+
+        #headline .text{
+            color: #FFFFFF;
+            padding: 50px 0px;  
+        }
+
+        #headline .text h2{
+            font-size: 4rem;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        #headline .text h2 #you{
+            font-size: 6rem;
+        }
+
+        #work{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* margin-top: 0px 50px; */
+            /* height: 500px; */
+            width: 100%;
+        }
+
+        #work .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 70%;
+            margin: 80px 0px;
+            /* border: 1px solid black; */
+        }
+
+        #work .box .card{
+            width: 33%;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 1px 3px 5px rgba(1, 1, 1, 0.4);
+            border-radius: 10px;
+            padding-bottom: 20px;
+        }
+
+        #work .box .card img{
+            width: 100%;
+        }
+
+        #work .box .card .title h3{
+            font-size: 16px;
+            padding: 10px 15px;
+        }
+
+        #work .box .card .info p{
+            font-size: 12px;
+            padding: 5px 15px;
+        }
+
+        #footer .main{
+            display: flex;
+            
+            
+        }
+
+        #footer .main .about{
+            width: 50%;
+            background-color: #722300;
+            color: #FFFFFF;
+            padding: 40px 80px 40px 50px;
+            
+        }
+
+        #footer .main .about h2{
+            font-size: 54px;
+            font-weight: 100;
+        }
+
+        #footer .main .about p{
+            font-size: 14px;
+            font-weight: 100;
+            padding: 10px 0px;
+        }
+
+        #footer .main .contact{
+            width: 50%;
+            background-color: #515603;
+            color: #FFFFFF;
+            padding: 40px 50px 40px 80px;
+        }
+
+        #footer .main .contact h2{
+            font-size: 54px;
+            font-weight: 100;
+        }
+
+        #footer .main .contact p{
+            font-size: 14px;
+            font-weight: 100;
+            padding: 10px 0px;
+        }
+
+        #footer .foot{
+            background-color: #161619;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            /* width: 100%; */
+            text-align: center;
+        
+        }
+
+        #footer .foot h3{
+            /* border: 1px solid pink; */
+            display: inline-block;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        @media screen and (max-width:850px) {
+            #work .box{
+                width: 90%;
+                padding: 0px 20px;
+            }
+        }
+
+        @media screen and (max-width:580px){
+
+            html{
+                font-size: 10px;
+            }
+
+            #footer{
+                width: 100%;
+            }
+
+            #footer .main {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            #footer .main .contact{
+                width: 100%;
+                padding: 20px;
+                text-align: center;
+
+            }
+
+            #work .box{
+                flex-direction: column;
+                margin: 20px 0px;
+                width: 100%;
+                padding: 0px 20px;
+            }
+            #work .box .card{
+                width: 100%;
+            }
+
+            #footer .main .about{
+                width: 100%;
+                padding: 20px;
+                text-align: center;
+            }
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="hero">
+            <div class="text">
+                <h2><span id="hi">Hi, </span>I am Darshan Khairnar</h2>
+                <h1>Full Stack Java Developer</h1>
+            </div>
+        </div>
+        <div id="headline">
+            <div class="text">
+                <h2>WORK , I CAN DO FOR <span id="you">YOU</span></h2>
+            </div>
+        </div>
+        <div id="work">
+            <div class="box">
+                <div class="card">
+                    <img src="../img/web.png" alt="">
+                    <div class="title">
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="info">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt deleniti alias sint, obcaecati voluptatem, ut
+                        </p>
+                        <p>
+                            fugiat quod doloremque excepturi qui vel ex. Aliquam, provident repellat. Error animi perferendis dolorem quidem nihil fugiat, dicta rerum a repudiandae ab, tenetur aliquam aliquid? Cumque odio sint quas fugit nesciunt libero ut quam harum!
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../img/mobile.png" alt="">
+                    <div class="title">
+                        <h3>APP Development</h3>
+                    </div>
+                    <div class="info">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt deleniti alias sint, obcaecati voluptatem, ut
+                        </p>
+                        <p>
+                            fugiat quod doloremque excepturi qui vel ex. Aliquam, provident repellat. Error animi perferendis dolorem quidem nihil fugiat, dicta rerum a repudiandae ab, tenetur aliquam aliquid? Cumque odio sint quas fugit nesciunt libero ut quam harum!
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../img/uiux.png" alt="">
+                    <div class="title">
+                        <h3>Ui/UX Development</h3>
+                    </div>
+                    <div class="info">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt deleniti alias sint, obcaecati voluptatem, ut
+                        </p>
+                        <p>
+                            fugiat quod doloremque excepturi qui vel ex. Aliquam, provident repellat. Error animi perferendis dolorem quidem nihil fugiat, dicta rerum a repudiandae ab, tenetur aliquam aliquid? Cumque odio sint quas fugit nesciunt libero ut quam harum!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="main">
+                <div class="contact">
+                    <h2>
+                        Contact Me
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, suscipit. Rerum ducimus a quod, ut et Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, suscipit. Rerum ducimus a quod, ut et voluptas obcaecati unde USvoluptas obcaecati unde US
+                    </p>
+                    <p>
+                        dosomecoding@example.test
+                    </p>
+                </div>
+                <div class="about">
+                    <h2>
+                        About Me
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, suscipit. Rerum ducimus a quod, ut et Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, suscipit. Rerum ducimus a quod, ut et voluptas obcaecati unde USvoluptas obcaecati unde US
+                    </p>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, suscipit. Rerum ducimus a quod, ut et Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, suscipit. Rerum ducimus a quod, ut et voluptas obcaecati unde USvoluptas obcaecati unde US
+                    </p>
+                </div>
+            </div>
+            <div class="foot">
+                <h3>Product By Do Some Coding</h3>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
