@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturent Website</title>
+
+    <!-- Icons -->
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+
+    <!-- Style -->
+    <style>
+        /* Universal Style */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Lato", sans-serif;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 22px;
+        }
+
+        .uni-pad {
+            padding: 0px 4rem;
+        }
+
+        /* Navbar Style */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            box-shadow: 5px 0px 10px rgba(1, 1, 1, 0.4);
+        }
+
+        nav .logo img {
+            height: 48px;
+        }
+
+        nav .bars i {
+            /* font-size: 48px; */
+            font-weight: 900;
+            font-size: 28px;
+            color: #19a13d;
+        }
+
+        /* Hero */
+
+        #hero{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #B7B7B7;
+            padding-bottom: 20px;
+        }
+
+        #hero .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #hero .main .main-img{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        #hero .main .main-img img{
+            width: 80%;
+            margin: 20px;
+        }
+
+        #hero .main .content{
+            width: 50%;
+            padding: 30px 0px;
+        }
+
+        #hero .main .content .btn1{
+            background-color: #19a13d;
+            color: #fff;
+            display: inline-block;
+            padding: 8px 16px;
+            font-size: 0.8rem;
+        }
+
+        #hero .main .content .title{
+            margin: 20px 0px 10px 0px;
+            font-size: 2.2rem;
+        }
+
+        #hero .main .content .info{
+            font-size: 0.8rem;
+        }
+
+        #hero .main .content .btn2{
+            background-color: #FFC066;
+            color: #fff;
+            display: inline-block;
+            padding: 8px 16px;
+            font-size:1.1rem;
+            margin: 10px 0px;
+        }
+
+        #hero .features{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 20px;
+        }
+
+        #hero .features .feature{
+            width: 33%;
+           
+        }
+
+        #hero .features .feature{
+            width: 33%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        #hero .features .feature .icon img{
+            width: 2rem;
+            height: 2rem;
+        }
+
+        #hero .features .feature .info h3{
+            font-size: 0.7rem;
+        }
+
+        #hero .features .feature .info p{
+            font-size: 0.6rem;
+        }
+
+        #menu{
+            padding-bottom: 30px;
+        }
+
+        #menu .galary
+        {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto auto;
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+        }
+
+        #menu .galary #item1{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        #menu .galary #item2{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        #menu .galary #item3{
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+
+        #menu .galary #item4{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+
+        #menu .galary #item5{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+
+        #menu .galary #item6{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+
+        #menu .galary #item7{
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+
+        #menu .galary img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: all 0.3s ease;
+        }
+
+        #menu .galary img:hover{
+            transform: scale(1.05);
+        }
+
+        #menu .title{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            font-weight: 200;
+        }
+        #menu .title h3{
+            font-size: 1.1rem;
+            background-color: #19a13d;
+            padding: 8px 16px;
+            display: inline-block;
+            color: #fff;
+            text-align: center;
+
+        }
+
+        #menu .title p
+        {
+            margin-top: 43px;
+            font-size: 1.4rem;
+        }
+
+        #footer
+        {
+            display: flex;
+            align-items: start;
+            justify-content: space-evenly;
+            width: 100%;
+            font-size: 0.8rem;
+            color: #565656;
+            background-color: #FFF0DB;
+            padding: 40px 0px;
+        }
+
+        #footer .logo img{
+            height: 2.2rem;
+        }
+
+        #footer .main h4{
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        #footer .main ul{
+            list-style-type: none;
+        }
+
+        #footer .support h4{
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        #footer .support ul{
+            list-style-type: none;
+        }
+
+        #footer .join h4{
+            font-size: 19px;
+            margin:10px 0px;
+        }
+
+        #footer .join input{
+            padding: 5px 10px;
+            width: 100%;
+        }
+
+        #footer .join ul{
+            list-style-type: none;
+            display: flex;
+        }
+
+        #footer .join ul li{
+            display: inline-block;
+            font-size: 1.2rem;
+            letter-spacing: 10px;
+        }
+
+        @media screen and (max-width:768px) {
+            .uni-pad {
+                padding: 0px 3rem;
+            } 
+            #hero .main .main-img{
+                height: 100%;
+
+            } 
+
+            #hero .main .content .info{
+                display: none;
+            }
+
+         
+
+            #hero .features .feature{
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 5px;
+            }
+
+            #menu .galary
+            {
+                grid-column-gap: 10px;
+                grid-row-gap: 10px;
+            }
+
+            #footer{ 
+                flex-wrap: wrap;
+                gap: 10px;
+                padding: 1.4rem 2rem;
+            }
+
+            #footer .logo{
+               width: 45%;
+                /* text-align: center; */
+            }
+
+            #footer .support{
+                width: 45%;
+                /* text-align: center; */
+            }
+
+            #footer .main{
+                width: 45%;
+                /* text-align: center; */
+            }
+
+            #footer .join{
+                width: 45%;
+                /* text-align: center; */
+            }
+        }
+
+        @media screen and (max-width:540px) {
+            .uni-pad {
+                padding: 0px 2rem;
+            }
+
+            nav {
+                
+                height: 50px;
+                
+            }
+
+            nav .logo img {
+                height: 36px;
+            }
+
+            nav .bars i {
+                font-size: 22px;
+            }
+            
+            #hero .main{
+                flex-direction: column;
+            }
+
+            #hero .main .main-img{
+                width: 100%;
+
+            }
+
+            #hero .main .content{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                
+            }
+            #hero .main .content .info{
+                display: block;
+            }
+
+            #hero .features{
+                flex-direction: column;
+            }
+
+            #hero .features .feature{
+                width: 100%;
+                flex-direction: row;
+                align-items: start;
+                text-align: start;
+                gap: 10px;
+            }
+
+
+            #footer .logo{
+                width: 100%;
+                text-align: center;
+            }
+
+            #footer .support{
+                width: 45%;
+                text-align: center;
+            }
+
+            #footer .main{
+                width: 45%;
+                text-align: center;
+            }
+
+            #footer .join{
+                width: 100%;
+                text-align: center;
+            } 
+            #footer .join ul{
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-width:425px) {
+            .uni-pad {
+                padding: 0px 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="uni-pad">
+        <div class="logo">
+            <img src="../img/logo1.png" alt="logo">
+        </div>
+        <div class="bars">
+            <i class="fi fi-rs-bars-staggered"></i>
+        </div>
+    </nav>
+    <div id="hero" class="uni-pad">
+        <div class="main">
+            <div class="main-img">
+                <img src="../img/hero_image.png" alt="">
+            </div>
+            <div class="content">
+                <div class="btn1">
+                    50 % OFF  All Products
+                </div>
+                <div class="title">
+                    Enjoy Your <br>
+                        Delicious Food
+                </div>
+                <div class="info">
+                    Quisque velit nisi, pretium ut lacinia in, elementum id enim. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                </div>
+                <div class="btn2">
+                    Explore Now
+                </div>
+            </div>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <div class="icon">
+                    <img src="../icon/discount.png" alt="">
+                </div>
+                <div class="info">
+                    <h3>Discount Voucher</h3>
+                    <p>Quisque velit nisi, pretium ut lacinia in df fasf </p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="icon">
+                    <img src="../icon/fresh.png" alt="">
+                </div>
+                <div class="info">
+                    <h3>Fresh Healthy Food</h3>
+                    <p>Quisque velit nisi, pretium ut lacinia in df fasf </p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="icon">
+                    <img src="../icon/delivery.png" alt="">
+                </div>
+                <div class="info">
+                    <h3>Fast Home Delivery</h3>
+                    <p>Quisque velit nisi, pretium ut lacinia in df fasf </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="menu" class="uni-pad">
+        <div class="title">
+            <h3>Our Menu</h3>
+            <p>Explore Our Menu</p>
+        </div>
+        <div class="galary">
+            <div class="box" id="item1">
+                <img src="../img/grid_image1.png" alt="" >
+            </div>
+            <div class="box" id="item2">
+                <img src="../img/grid_image2.png" alt="" >
+            </div>
+            <div class="box" id="item3">
+                <img src="../img/grid_image3.png" alt="">
+            </div>
+            <div class="box" id="item4">
+                <img src="../img/grid_image4.png" alt="">
+            </div>
+            <div class="box" id="item5">
+                <img src="../img/grid_image5.png" alt="">
+            </div>
+            <div class="box" id="item6">
+                <img src="../img/grid_image6.png" alt="">
+            </div>
+            <div class="box" id="item7">
+                <img src="../img/grid_image7.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="uni-pad">
+        <div class="logo">
+            <img src="../img/logo1.png" alt="">
+        </div>
+        <div class="main">
+            <h4>Main Link</h4>
+            <ul>
+                <li>Order Tracking</li>
+                <li>New Order</li>
+                <li>Contact Us</li>
+                <li>News & Blogs</li>
+            </ul>
+        </div>
+        <div class="support">
+            <h4>Support</h4>
+            <ul>
+                <li>About Us</li>
+                <li>Privacy Policy</li>
+                <li>Terms & Conditions</li>
+            </ul>
+        </div>
+        <div class="join">
+            <h4>Join Our Newsletter</h4>
+            <input type="email" name="email" id="" placeholder="Enter Your Email Address..">
+            <h4>Follow Us</h4>
+            <ul id="social">
+                <li><i class="fi fi-brands-facebook"></i></li>
+                <li><i class="fi fi-brands-instagram"></i></li>
+                <li><i class="fi fi-brands-twitter"></i></li>
+                <li><i class="fi fi-brands-youtube"></i></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
