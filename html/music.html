@@ -117,7 +117,7 @@
             align-items: center;
             justify-content: start;
             padding: 3% 10%;
-            height: 120vh;
+            height: 700px;
             color: var(--body);
             background-color: var(--purple500);
             position: relative;
@@ -146,6 +146,10 @@
             text-align: center;
         }
 
+        #main .text p{
+            text-align: center;
+        }
+
         #main .btn button{
             margin: 1rem 0px;
             padding: 8px 16px;
@@ -159,7 +163,6 @@
         #ipad{
             padding: 0px 15%;
             position: absolute;
-            
             top: 60%;
 
         }
@@ -171,7 +174,7 @@
         /* Main 2 */
 
         #main2{
-            height: 200vh;
+            height: 80%;
             display: flex;
             flex-direction: column;
             padding: 0px 10% ;
@@ -228,6 +231,167 @@
         #banner p{
             font-size: 0.7rem;
             text-align: center;
+        }
+
+        #gift{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 4% 10%;
+
+            gap: 1.5rem;
+            /* border: 1px solid black; */
+        }
+
+        #gift .card
+        {
+            width: 40%;
+            /* aspect-ratio: 1/1; */
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid black; */
+
+            
+        }
+
+        #gift .card img{
+            width: 100%;
+            /* height: 100%; */
+        }
+
+        #gift .content{
+            width: 60%;
+            padding: 10px;
+            /* border: 1px solid black; */
+            /* aspect-ratio: 1/1; */
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+
+        }
+
+        #gift .content h3{
+            font-size: 1.1rem;
+        }
+
+        #gift .content p{
+            font-size: 0.7rem;
+            line-height: 1.1rem;
+            padding:10px 10px 10px 0px;
+        }
+
+        #gift .content button{
+            background-color: var(--purplebtn);
+            padding: 8px 16px;
+            font-size: 0.8rem;
+            color: var(--body);
+            border: none;
+            margin-top: 20px;
+        }
+
+        #gift .content #hr{
+            width: 90%;
+            height: 1px;
+            background-color: gray;
+        }
+
+        /* footer{
+            width: 100%;
+        } */
+
+        footer .navigation{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            gap: 10px;
+            padding: 2% 10%;
+            width: 100%;
+            background-color: var(--purple600);
+        }
+
+        footer .navigation .box .title h3{
+            font-size: 0.8rem;
+            color: var(--body);
+        }
+
+        footer .navigation .box .links ul{
+            list-style-type: none;
+        }
+
+        footer .navigation .box .links ul li{
+            font-size: 0.6rem;
+            color: var(--body);
+            padding: 4px 0px;
+        }
+
+        footer .navigation .box .shr{
+            width: 80%;
+            height: 1px;
+            background-color: var(--body);
+
+            display: block;
+            margin-top: 4px;
+            margin-bottom: 10px;
+        }
+
+        footer .navigation .box{
+            width: 25%;
+        }
+
+        footer .foot{
+            background-color: var(--purple300);
+            padding: 0.5rem 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer .foot h3{
+            color: var(--body);
+            font-size: 0.7rem;
+        }
+
+        @media screen and (max-width:620px) {
+            #gift{
+                flex-direction: column;
+            }
+            #gift .card{
+                width: 100%;
+                aspect-ratio: 1/0.2;
+            }
+
+            #gift .content{
+                width: 100%;
+            }
+
+            #ipad{
+                position: relative;
+                top: 10px;
+            }
+
+            nav .links{
+                display: none;
+            }
+
+
+            footer .navigation{
+                flex-wrap: wrap;
+                gap: 10px;
+                padding: 20px 0px;
+            }
+
+            footer .navigation .box{
+                width: 45%;
+            }
+
+            #main2{
+                padding-top: 10%;
+            }
         }
     </style>
 </head>
@@ -303,6 +467,91 @@
                 <h3>A world of entertainment. Available wherever you are.</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veniam nobis, nisi ut expedita, doloribus reprehenderit explicabo non velit repellat alias saepe inventore repellendus? Molestias suscipit eos tempora? Quae quaerat cumque in veritatis impedit dolorum sapiente recusandae minima quo aperiam quam, excepturi quasi totam ad quas? Ipsam laudantium soluta delectus!</p>
         </div>
+
+        <div id="gift">
+            <div class="card">
+                <img src="../img/gift_card.png" alt="">
+            </div>
+            <div class="content">
+                    <h3>Gift Cards</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque expedita tempore quasi omnis a aut et totam illo fuga accusamus dolorum vero, ut harum consectetur. Minima molestias officiis culpa non sed dicta itaque. Et aliquam illo obcaecati molestias veritatis porro.</p>
+                    <p>Already have an Orange MyTunes Music Gift Card?</p>
+                    <span id="hr"></span>
+                    <button>
+                        Redeem
+                    </button>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="navigation">
+                <div class="box">
+                    <div class="title">
+                        <h3>Shop & Learn</h3>
+                    </div>
+                    <span class="shr"></span>
+                    <div class="links">
+                        <ul>
+                            <li>Music</li>
+                            <li>Movie</li>
+                            <li>Shows</li>
+                            <li>Apps</li>
+                            <li>Gift Cards</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="title">
+                        <h3>Orange Store</h3>
+                    </div>
+                    <span class="shr"></span>
+                    <div class="links">
+                        <ul>
+                            <li>Find a Store</li>
+                            <li>Today at Orange</li>
+                            <li>Orange Camp</li>
+                            <li>Financing</li>
+                            <li>Order Status</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="title">
+                        <h3>Education  & Business</h3>
+                    </div>
+                    <span class="shr"></span>
+                    <div class="links">
+                        <ul>
+                            <li>Orange & Education</li>
+                            <li>Shop for Collage</li>
+                            <li>Orange & Business</li>
+                            <li>Shop For Business</li>
+                            <li>Jobs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="title">
+                        <h3>About Orange</h3>
+                        
+                    </div>
+                    <span class="shr"></span>
+                    <div class="links">
+                        <ul>
+                            <li>Newsroom</li>
+                            <li>Orange Leadershp</li>
+                            <li>Investors</li>
+                            <li>Envents</li>
+                            <li>Contact Orange</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="foot">
+                <h3>Copyright © 2022 Do Some Coding</h3>
+            </div>
+        </footer>
 
     </body>
 </html>
