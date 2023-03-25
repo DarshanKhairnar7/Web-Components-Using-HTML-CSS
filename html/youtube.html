@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto",sans-serif;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        header {
+            width: 100%;
+            /* border: 1px solid black; */
+            /* display: flex; */
+            height: fit-content;
+        }
+
+
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 66px;
+            border-bottom: 1px solid #E1E1E1;
+        }
+
+        header nav .logo {
+            /* width: 84px; */
+            padding: 10px 10px;
+            height: 44px;
+        }
+
+        header nav .logo img {
+            height: 100%;
+        }
+
+        header nav .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            /* height: 38px; */
+            /* width: 588px; */
+        }
+
+        header nav .center .search-bar {
+            /* width: 580px; */
+            width: 100%;
+            display: flex;
+            margin-right: 10px;
+
+        }
+
+        header nav .center input {
+            /* width: 515px; */
+            width: 100%;
+            padding: 5px 16px;
+            border: 0.5px solid #ccc;
+
+        }
+
+        header nav .center button {
+            padding: 0px 10px;
+            border: 0.5px solid #ccc;
+            background-color: #E1E1E1;
+            border-left: none;
+        }
+
+        header nav .center #mic {
+            /* width: 30px;
+            height: 30px; */
+            padding: 5px;
+            border-radius: 50%;
+            background-color: #ccc;
+        }
+
+
+        header nav .icons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+            /* padding-right: 50px; */
+            padding: 0px 1rem;
+            cursor: pointer;
+        }
+
+        header nav .icons .icon img {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        header .tags {
+            border-bottom: 1px solid #E1E1E1;
+            /* padding: 1rem; */
+            display: flex;
+            justify-content: start;
+            align-items: center;
+
+        }
+
+        header .tags .tag {
+            background-color: #EEEEEE;
+            color: black;
+            padding: 6px 12px;
+            border-radius: 40px;
+            display: block;
+            margin: 10px 0.3rem;
+            font-size: 0.9rem;
+            border: 1px solid #A7A7A7;
+            cursor: pointer;
+
+        }
+
+        header .tags #all {
+            background-color: black;
+            color: #fff;
+            cursor: pointer;
+        }
+
+
+        /* Aside */
+        aside {
+            height: 100vh;
+            background-color: #fff;
+            padding: 1rem 1rem;
+            width: 68px;
+        }
+
+        aside .top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            /* padding: 0.8rem; */
+            padding-bottom: 20px;
+            cursor: pointer;
+        }
+
+        aside .bars {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            padding-top: 0.8rem;
+            cursor: pointer;
+        }
+
+        aside .bars p {
+            font-size: 8px;
+            padding: 0.3rem;
+        }
+
+        main {
+            background-color: #EEEEEE;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            /* align-items: ; */
+            flex-wrap: wrap;
+            /* column-gap: 20px; */
+            /* row-gap:10px ; */
+            padding: 24px;
+
+        }
+
+        main .video{
+            width: 24%;
+            /* margin: 1rem; */
+            height: fit-content;
+        }
+
+        main .video .thumbail img{
+            width: 100%;
+        }
+
+        main .video .head{
+            padding: 10px 0px;
+            display: flex;
+            gap: 0.3rem;
+
+        }
+        main .video .head h4{
+            font-size: 0.9rem;
+        }
+
+        main .video .head .content .title{
+            padding: 0px 3px;
+        }
+
+        main .video .head .content .title p{
+            font-size: 0.8rem;
+            padding-top: 5px;
+
+        }
+
+        main .video .head .content .title p span{
+            font-size: 0.7rem;
+            margin-right: 0.3rem;
+            display: inline-block;
+        }
+
+        @media screen and(max-width:768px) {
+
+            header nav .center input {
+                width: 60%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <img src="../icon/bars.svg" alt="Bars">
+            </div>
+            <div class="bars">
+                <img src="../icon/home.svg">
+                <p>Home</p>
+            </div>
+            <div class="bars">
+                <img src="../icon/compass.svg" alt="Bars">
+                <p>Explore</p>
+            </div>
+            <div class="bars">
+                <img src="../icon/video-gallary.svg" alt="Bars">
+                <p>Subscriptions</p>
+            </div>
+            <div class="bars">
+                <img src="../icon/video-library.svg" alt="Bars">
+                <p>Library</p>
+            </div>
+            <div class="bars">
+                <img src="../icon/video-gallary.svg" alt="Bars">
+                <p>Playlist</p>
+            </div>
+        </aside>
+        <div class="left">
+            <header>
+                <nav>
+                    <div class="logo">
+                        <img src="../img/youtube-logo.png" alt="YouTube Logo">
+                    </div>
+                    <div class="center">
+                        <div class="search-bar">
+                            <input type="search" name="search" id="search">
+                            <button>
+                                <img src="../icon/search.svg" alt="Search">
+                            </button>
+                        </div>
+                        <img src="../icon/mic.svg" alt="Mic" id="mic">
+                    </div>
+                    <div class="icons">
+                        <div class="icon">
+                            <img src="../icon/video-add.svg" alt="">
+                        </div>
+                        <div class="icon">
+                            <img src="../icon/dot-grid.svg" alt="">
+                        </div>
+                        <div class="icon">
+                            <img src="../icon/bell.svg" alt="">
+                        </div>
+                        <div class="icon">
+                            <img src="../img/avatar.png" alt="">
+                        </div>
+                    </div>
+                </nav>
+                <div class="tags">
+                    <span class="tag" id="all">
+                        All
+                    </span>
+                    <span class="tag">
+                        Mixes
+                    </span>
+                    <span class="tag">
+                        Live
+                    </span>
+                    <span class="tag">
+                        Computer Science
+                    </span>
+                    <span class="tag">
+                        Music
+                    </span>
+                    <span class="tag">
+                        Movies
+                    </span>
+                    <span class="tag">
+                        Web Developement
+                    </span>
+                </div>
+            </header>
+            <main>
+                <div class="video">
+                    <div class="thumbail">
+                        <img src="../img/thumbnail.png" alt="">
+                    </div>
+                    <div class="head">
+                        <div class="icon">
+                            <img src="../img/avatar.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="title">
+                                <h4>Chakra UI Complete Course Hindi</h4>
+                                <p>Do some codings</p>
+                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="thumbail">
+                        <img src="../img/thumbnail.png" alt="">
+                    </div>
+                    <div class="head">
+                        <div class="icon">
+                            <img src="../img/avatar.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="title">
+                                <h4>Chakra UI Complete Course Hindi</h4>
+                                <p>Do some codings</p>
+                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="thumbail">
+                        <img src="../img/thumbnail.png" alt="">
+                    </div>
+                    <div class="head">
+                        <div class="icon">
+                            <img src="../img/avatar.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="title">
+                                <h4>Chakra UI Complete Course Hindi</h4>
+                                <p>Do some codings</p>
+                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="thumbail">
+                        <img src="../img/thumbnail.png" alt="">
+                    </div>
+                    <div class="head">
+                        <div class="icon">
+                            <img src="../img/avatar.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="title">
+                                <h4>Chakra UI Complete Course Hindi</h4>
+                                <p>Do some codings</p>
+                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="thumbail">
+                        <img src="../img/thumbnail.png" alt="">
+                    </div>
+                    <div class="head">
+                        <div class="icon">
+                            <img src="../img/avatar.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="title">
+                                <h4>Chakra UI Complete Course Hindi</h4>
+                                <p>Do some codings</p>
+                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="thumbail">
+                        <img src="../img/thumbnail.png" alt="">
+                    </div>
+                    <div class="head">
+                        <div class="icon">
+                            <img src="../img/avatar.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="title">
+                                <h4>Chakra UI Complete Course Hindi</h4>
+                                <p>Do some codings</p>
+                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="thumbail">
+                        <img src="../img/thumbnail.png" alt="">
+                    </div>
+                    <div class="head">
+                        <div class="icon">
+                            <img src="../img/avatar.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="title">
+                                <h4>Chakra UI Complete Course Hindi</h4>
+                                <p>Do some codings</p>
+                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="thumbail">
+                        <img src="../img/thumbnail.png" alt="">
+                    </div>
+                    <div class="head">
+                        <div class="icon">
+                            <img src="../img/avatar.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="title">
+                                <h4>Chakra UI Complete Course Hindi</h4>
+                                <p>Do some codings</p>
+                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="thumbail">
+                        <img src="../img/thumbnail.png" alt="">
+                    </div>
+                    <div class="head">
+                        <div class="icon">
+                            <img src="../img/avatar.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="title">
+                                <h4>Chakra UI Complete Course Hindi</h4>
+                                <p>Do some codings</p>
+                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="thumbail">
+                        <img src="../img/thumbnail.png" alt="">
+                    </div>
+                    <div class="head">
+                        <div class="icon">
+                            <img src="../img/avatar.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="title">
+                                <h4>Chakra UI Complete Course Hindi</h4>
+                                <p>Do some codings</p>
+                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="thumbail">
+                        <img src="../img/thumbnail.png" alt="">
+                    </div>
+                    <div class="head">
+                        <div class="icon">
+                            <img src="../img/avatar.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="title">
+                                <h4>Chakra UI Complete Course Hindi</h4>
+                                <p>Do some codings</p>
+                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="thumbail">
+                        <img src="../img/thumbnail.png" alt="">
+                    </div>
+                    <div class="head">
+                        <div class="icon">
+                            <img src="../img/avatar.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="title">
+                                <h4>Chakra UI Complete Course Hindi</h4>
+                                <p>Do some codings</p>
+                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
