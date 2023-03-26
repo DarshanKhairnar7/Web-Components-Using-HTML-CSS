@@ -42,7 +42,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 66px;
+            height: 4rem;
             border-bottom: 1px solid #E1E1E1;
         }
 
@@ -107,6 +107,10 @@
             cursor: pointer;
         }
 
+        header nav #sear{
+            display: none;
+        }
+
         header nav .icons .icon img {
             width: 2rem;
             height: 2rem;
@@ -114,10 +118,18 @@
 
         header .tags {
             border-bottom: 1px solid #E1E1E1;
-            /* padding: 1rem; */
-            display: flex;
+            padding:0.3rem;
+            /* display: flex;
             justify-content: start;
-            align-items: center;
+            align-items: center; */
+            /* overflow-x: scroll; */
+            align-content: start;
+            overflow-y: hidden;
+            /* overflow: hidden; */
+            height: 3.5rem;
+            width: 100vw;
+            /* white-space: nowrap; */
+
 
         }
 
@@ -126,11 +138,12 @@
             color: black;
             padding: 6px 12px;
             border-radius: 40px;
-            display: block;
-            margin: 10px 0.3rem;
+            /* display: block; */
+            margin: 0.3rem;
             font-size: 0.9rem;
             border: 1px solid #A7A7A7;
             cursor: pointer;
+            display: inline-block;
 
         }
 
@@ -180,10 +193,9 @@
             height: 100%;
             display: flex;
             justify-content: space-between;
-            /* align-items: ; */
+            align-items: start;
+            align-content: start;
             flex-wrap: wrap;
-            /* column-gap: 20px; */
-            /* row-gap:10px ; */
             padding: 24px;
 
         }
@@ -224,12 +236,84 @@
             display: inline-block;
         }
 
-        @media screen and(max-width:768px) {
+        @media screen and (max-width:1025px){
+            /* .container aside{
+                display: none;
+            } */
 
+            html{
+                font-size: 14px;
+            }
+
+            .container .left main .video{
+                width: 32%;
+            }
+        }
+
+        @media screen and (max-width:786px){
+            .container aside{
+                display: none;
+            }
+
+            
+
+            html{
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (max-width:426px){
+            .container .left main .video{
+                width: 100%;
+            }
+
+            .container .left main .video .head{
+                padding-left: 1rem;
+                
+            }
+
+            .container .left main .video .head .icon{
+                width: 3rem;
+                height: 3rem;
+            }
+
+            .container .left main .video .head .icon img{
+                width: 100%;
+            }
+
+            .container .left main .video .head .content .title .other{
+                display: flex;
+                gap: 1rem;
+            }
+
+            .container .left main{
+                padding: 0px;
+            }
+
+            header nav #sear{
+                display: block;
+            }
+
+            header nav .center{
+                display: none;
+            }
+        }
+
+        /* @media screen and(max-width:768px) {
             header nav .center input {
                 width: 60%;
             }
+            
+            html{
+                font-size: 12px;
+            }
         }
+
+        @media screen and (max-width:540px){
+            .container .top{
+                display: none;
+            }
+        } */
     </style>
 </head>
 
@@ -285,6 +369,9 @@
                         <div class="icon">
                             <img src="../icon/bell.svg" alt="">
                         </div>
+                        <div class="icon" id="sear">
+                            <img src="../icon/search.svg" alt="">
+                        </div>
                         <div class="icon">
                             <img src="../img/avatar.png" alt="">
                         </div>
@@ -326,8 +413,10 @@
                         <div class="content">
                             <div class="title">
                                 <h4>Chakra UI Complete Course Hindi</h4>
-                                <p>Do some codings</p>
-                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                <div class="other">
+                                    <p>Do some codings</p>
+                                    <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -343,8 +432,10 @@
                         <div class="content">
                             <div class="title">
                                 <h4>Chakra UI Complete Course Hindi</h4>
-                                <p>Do some codings</p>
-                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                <div class="other">
+                                    <p>Do some codings</p>
+                                    <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -360,8 +451,10 @@
                         <div class="content">
                             <div class="title">
                                 <h4>Chakra UI Complete Course Hindi</h4>
-                                <p>Do some codings</p>
-                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                <div class="other">
+                                    <p>Do some codings</p>
+                                    <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -377,8 +470,10 @@
                         <div class="content">
                             <div class="title">
                                 <h4>Chakra UI Complete Course Hindi</h4>
-                                <p>Do some codings</p>
-                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                <div class="other">
+                                    <p>Do some codings</p>
+                                    <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -394,8 +489,10 @@
                         <div class="content">
                             <div class="title">
                                 <h4>Chakra UI Complete Course Hindi</h4>
-                                <p>Do some codings</p>
-                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                <div class="other">
+                                    <p>Do some codings</p>
+                                    <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -411,8 +508,10 @@
                         <div class="content">
                             <div class="title">
                                 <h4>Chakra UI Complete Course Hindi</h4>
-                                <p>Do some codings</p>
-                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                <div class="other">
+                                    <p>Do some codings</p>
+                                    <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -428,8 +527,10 @@
                         <div class="content">
                             <div class="title">
                                 <h4>Chakra UI Complete Course Hindi</h4>
-                                <p>Do some codings</p>
-                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                <div class="other">
+                                    <p>Do some codings</p>
+                                    <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -445,8 +546,10 @@
                         <div class="content">
                             <div class="title">
                                 <h4>Chakra UI Complete Course Hindi</h4>
-                                <p>Do some codings</p>
-                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                <div class="other">
+                                    <p>Do some codings</p>
+                                    <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -462,8 +565,10 @@
                         <div class="content">
                             <div class="title">
                                 <h4>Chakra UI Complete Course Hindi</h4>
-                                <p>Do some codings</p>
-                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                <div class="other">
+                                    <p>Do some codings</p>
+                                    <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -479,8 +584,10 @@
                         <div class="content">
                             <div class="title">
                                 <h4>Chakra UI Complete Course Hindi</h4>
-                                <p>Do some codings</p>
-                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                <div class="other">
+                                    <p>Do some codings</p>
+                                    <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -496,8 +603,10 @@
                         <div class="content">
                             <div class="title">
                                 <h4>Chakra UI Complete Course Hindi</h4>
-                                <p>Do some codings</p>
-                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                <div class="other">
+                                    <p>Do some codings</p>
+                                    <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -513,8 +622,10 @@
                         <div class="content">
                             <div class="title">
                                 <h4>Chakra UI Complete Course Hindi</h4>
-                                <p>Do some codings</p>
-                                <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                <div class="other">
+                                    <p>Do some codings</p>
+                                    <p> <span>10Cr Views</span> <span>1 day ago</span> </p>
+                                </div>
                             </div>
                         </div>
                     </div>
