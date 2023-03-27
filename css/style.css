@@ -82,7 +82,7 @@
 }
 
 .container .content .card {
-    width: 48%;
+    width: 30%;
     /* padding: 20px; */
     /* margin: 20px; */
     box-sizing: border-box;
@@ -177,6 +177,10 @@
 @media screen and (max-width:768px) {
     .container .banner{
         width: 90%;
+    }
+
+    .container .content .card{
+        width: 48%;
     }
 }
 
