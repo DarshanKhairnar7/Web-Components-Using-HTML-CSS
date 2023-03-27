@@ -8,56 +8,74 @@
     <title>Components Using HTML & CSS</title>
     <script src="./js/script.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+
+     <!-- Icons -->
+     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+
+     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+ 
+     <!-- Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link
+         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+         rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
-        <div class="head uni-pad">
-            <h2>Website Components</h2>
-        </div>
-        <div class="banner uni-pad">
-            <div class="img">
-                <img src="./img/Profile1.jpg" alt="" id="pro">
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="#">Web Components</a>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Me</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#"><i class="fi fi-brands-instagram"></i></a></li>
+                        <li><a href="#"><i class="fi fi-brands-twitter"></i></a></li>
+                        <li><a href="#"><i class="fi fi-brands-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="banner uni-pad">
+                <div class="img">
+                    <img src="./img/Profile1.jpg" alt="" id="pro">
+                </div>
+                <div class="text">
+                    <h1>
+                        <span>Hi</span>, I am Darshan Khairnar
+                        I am Full Stack Java Developer
+                    </h1>
+                </div>
             </div>
-            <div class="text">
-                <h1>
-                    <span>Hi</span>, I am Darshan Khairnar
-                    I am Full Stack Java Developer
-                </h1>
-            </div>
-        </div>
-        <div class="projects uni-pad">
             <div class="title">
                 <h2>Website Components</h2>
-                <h3>Made Using HTML, CSS , JavaScript</h3>
+                <h3>Made Using HTML, CSS , JavaScript & jQuery</h3>
             </div>
-            <div class="content">
-                <div class="card">
-                    <div class="img-holder">
-                       <a href="./html/profilecard.html">
-                        <img src="./img/profilecard.png" alt="">
-                    </a> 
-                    </div>
-                    <div class="card-title">
-                        Profile Card
-                    </div>
-                    <div class="link">
-                        <a href="./html/profilecard.html">Live</a>
-                        <a href="./html/profilecard.html">Code</a>
-                    </div>
-                </div>
+            <div class="projects">
                 <div class="card">
                     <div class="img-holder">
                         <a href="./html/landingpage.html">
                             <img src="./img/landingpage.png" alt="">
                         </a>
+                        <div class="card-title">
+                            Landing Page Photography
+                        </div>
                     </div>
+                </div>
+                <div class="card">
+                    <div class="img-holder">
+                       <a href="./html/profilecard.html">
+                        <img src="./img/profilecard.png" alt="">
+                    </a> 
                     <div class="card-title">
-                        Landing Page Photography
+                        Profile Card
                     </div>
-                    <div class="link">
-                        <a href="./html/landingpage.html">Live</a>
-                        <a href="./html/landingpage.html">Code</a>
                     </div>
                 </div>
                 <div class="card">
@@ -65,13 +83,9 @@
                         <a href="./html/sidebar.html">
                         <img src="./img/sidebar.png" alt="">
                         </a>
-                    </div>
-                    <div class="card-title">
-                        Sidebar
-                    </div>
-                    <div class="link">
-                        <a href="./html/sidebar.html">Live</a>
-                        <a href="./html/sidebar.html">Code</a>
+                        <div class="card-title">
+                            Sidebar
+                        </div>
                     </div>
                 </div>
                 <div class="card">
@@ -79,13 +93,9 @@
                         <a href="./html/loginform.html">
                             <img src="./img/loginform.png" alt="">
                         </a>
-                    </div>
-                    <div class="card-title">
-                        Login Form
-                    </div>
-                    <div class="link">
-                        <a href="./html/loginform.html">Live</a>
-                        <a href="./html/loginform.html">Code</a>
+                        <div class="card-title">
+                            Login Form
+                        </div>
                     </div>
                 </div>
                 <div class="card">
@@ -93,129 +103,102 @@
                         <a href="./html/flippingcard.html">
                             <img src="./img/flipping.png" alt="">
                         </a>
+                        <div class="card-title">
+                            Flippin Credit Card
+                        </div>
                     </div>
-                    <div class="card-title">
-                        Flippin Credit Card
-                    </div>
-                    <div class="link">
-                        <a href="./html/flippingcard.html">Live</a>
-                        <a href="./html/flippingcard.html">Code</a>
-                    </div>
+            
                 </div>
                 <div class="card">
                     <div class="img-holder">
                         <a href="./html/tribute.html">
                         <img src="./img/tribute.png" alt="">
                         </a>
+                        <div class="card-title">
+                            Profile Card
+                        </div>
                     </div>
-                    <div class="card-title">
-                        Profile Card
-                    </div>
-                    <div class="link">
-                        <a href="./html/tribute.html">Live</a>
-                        <a href="./html/tribute.html">Code</a>
-                    </div>
+                    
                 </div>
                 <div class="card">
                     <div class="img-holder">
                         <a href="./html/registerform.html">
                         <img src="./img/regform.png" alt="">
                         </a>
+                        <div class="card-title">
+                            Registeration Form
+                        </div>
                     </div>
-                    <div class="card-title">
-                        Registeration Form
-                    </div>
-                    <div class="link">
-                        <a href="./html/registerform.html">Live</a>
-                        <a href="./html/registerform.html">Code</a>
-                    </div>
+                    
                 </div>
                 <div class="card">
                     <div class="img-holder">
                         <a href="./html/paralexwebsite.html">
                         <img src="./img/paralexweb.png" alt="">
                         </a>
+                        <div class="card-title">
+                            Paralex Website
+                        </div>
                     </div>
-                    <div class="card-title">
-                        Paralex Website
-                    </div>
-                    <div class="link">
-                        <a href="./html/paralexwebsite.html">Live</a>
-                        <a href="./html/paralexwebsite.html">Code</a>
-                    </div>
+                    
                 </div>
                 <div class="card">
                     <div class="img-holder">
                         <a href="./html/portfolio.html">
                         <img src="./img/portfolio.png" alt="">
                         </a>
+                        <div class="card-title">
+                            Portfolio Website
+                        </div>
                     </div>
-                    <div class="card-title">
-                        Portfolio Website
-                    </div>
-                    <div class="link">
-                        <a href="./html/portfolio.html">Live</a>
-                        <a href="./html/portfolio.html">Code</a>
-                    </div>
+                    
                 </div>
                 <div class="card">
                     <div class="img-holder">
                         <a href="./html/resturent.html">
                         <img src="./img/resturent.png" alt="">
                         </a>
+                        <div class="card-title">
+                            Resturent Website
+                        </div>
                     </div>
-                    <div class="card-title">
-                        Resturent Website
-                    </div>
-                    <div class="link">
-                        <a href="./html/resturent.html">Live</a>
-                        <a href="./html/resturent.html">Code</a>
-                    </div>
+                    
                 </div>
                 <div class="card">
                     <div class="img-holder">
                         <a href="./html/youtube.html">
                         <img src="./img/youtube.png" alt="">
                         </a>
+                        <div class="card-title">
+                            YouTube Clone
+                        </div>
                     </div>
-                    <div class="card-title">
-                        YouTube Clone
-                    </div>
-                    <div class="link">
-                        <a href="./html/youtube.html">Live</a>
-                        <a href="./html/youtube.html">Code</a>
-                    </div>
+                   
                 </div>
                 <div class="card">
                     <div class="img-holder">
                         <a href="./html/documentation.html">
                         <img src="./img/docs.png" alt="">
                         </a>
+                        <div class="card-title">
+                            Documentation Website
+                        </div>
                     </div>
-                    <div class="card-title">
-                        Documentation Website
-                    </div>
-                    <div class="link">
-                        <a href="./html/documentation.html">Live</a>
-                        <a href="./html/documentation.html">Code</a>
-                    </div>
+                    
                 </div>
                 <div class="card">
                     <div class="img-holder">
                         <a href="./html/blog-page-1.html">
                         <img src="./img/blog.png" alt="">
                         </a>
+                        <div class="card-title">
+                            Documentation Website
+                        </div>
                     </div>
-                    <div class="card-title">
-                        Documentation Website
-                    </div>
-                    <div class="link">
-                        <a href="./html/blog-page-1.html">Live</a>
-                        <a href="./html/blog-page-1.html">Code</a>
-                    </div>
+            
                 </div>
             </div>
-        </div>
+        </main>
     </div>
 </body>
 
