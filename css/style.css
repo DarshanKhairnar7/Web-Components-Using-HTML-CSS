@@ -87,39 +87,38 @@ html{
 .container main .projects .card{
     width: 32%;
     transition: all 0.3s ease;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.7rem;
     overflow: hidden;
-    height: fit-content;
-    /* object-fit: cover; */
     
 }
 
 .container main .projects .card .img-holder{
-    /* height: 100%;
-    width: 100%; */
-    height: fit-content;
+    width: 100%;
+    height: 100%;
     position: relative;
 }
 
 .container main .projects .card .img-holder a{
-    display: block;
     width: 100%;
     height: 100%;
-    /* border-radius: 20px; */
+    display: block;
 }
 
 .container main .projects .card .img-holder a img{
-    object-fit: contain;
-    width: 100%;
-    object-position: center;
-    height: 100%;
-    /* border-radius: 20px; */
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+   display: block;
 }
 
 .container main .projects .card .card-title{
     position: absolute;
-    bottom: 0.2rem;
-    /* left: 1rem; */
+    bottom: 0;
+    left: 0;
     padding: 1rem 1rem;
     font-weight: 600;
     width: 100%;
@@ -129,7 +128,7 @@ html{
 .container main .projects .card:hover{
     transform: scale(1.03);
     box-shadow: 2px 3px 8px rgba(1,1,1,0.3),-2px -3px 8px rgba(0,0,0,0.5);
-}
+} 
 
 @media screen and (max-width:930px) {
     .container main .banner{
