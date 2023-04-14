@@ -79,6 +79,7 @@ html{
 
 .container main .banner .text{
     width: 50%;
+    text-align: center;
 }
 
 .container main .title{
@@ -157,12 +158,21 @@ html{
 }
 
 @media screen and (max-width:768px) {
+    .container header nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
     .container main .projects .card{
         width: 48%;
     }
 
     .container header nav .links{
         display: none;
+    }
+    .container main .banner .text{
+        width: 70%;
     }
 }
 
@@ -181,7 +191,11 @@ html{
 
     .container main .banner .text{
         width: 100%;
-        text-align: center;
+       
+    }
+
+    .container main .banner .text{
+        width: 100%;
     }
 }
 
