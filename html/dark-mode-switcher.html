@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Switch Mode</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Fontawoesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Style -->
+    <style>
+
+        :root{
+            --text-color:var(#3C3A47);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body,html{
+            font-family: "Poppins",sans-serif;
+            font-size: 18px;
+        }
+
+        header{
+            padding: 2rem 4rem;
+        }
+
+        header .top{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header .main{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header .main .left,header .main .left{
+            width: 50%;
+        }
+        header .main .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+        header .main .left .caption{
+            font-weight: 300;
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin: 1rem 0;
+        }
+
+        header .main .left h1{
+            font-size: 2.4rem;
+            font-size: 800;
+            line-height: 1.35;
+            letter-spacing: -2px;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        header .main .left .form{
+            width: 80%;
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+
+        }
+        header .main .left .form input{
+            background-color: #F5F5F6;
+            border: none;
+            outline: none;
+            padding: 0.7rem 1.2rem;
+            border-radius: 0.4rem;
+            width: 70%;
+        }
+
+        header .main .left .form button{
+            border: 1px solid #D19361;
+            outline: none;
+            padding: 0.7rem 1.2rem;
+            border-radius: 0.4rem;
+            color: #D19361;
+            background-color: transparent;
+            width: 30%;
+        }
+
+        header .main .left .small{
+            font-size: 0.7rem;
+            font-weight: 200;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        header .main .left .icons{
+            display: flex;
+            justify-content: start;
+        }
+
+        header .main .left .icons .icon{
+            margin-right: 0.8rem;
+        }
+
+        header .main .left .icons .icon i{
+            font-size: 1.5rem;
+            color: var(--text-color);
+
+        }
+
+        header .main .right img{
+            height: 90vh;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <img src="../img/avatar.png" alt="">
+            <div class="toggle">
+                toggle switch here
+            </div>
+        </div>
+        <div class="main">
+            <div class="left">
+                <h3 class="caption">Comming Soon</h3>
+                <h1>Get Notified About Our Store Opening</h1>
+                <div class="form">
+                    <input type="email" name="email" id="email" placeholder="Enter Your Email Address *">
+                    <button type="submit">Notify Me</button>
+                </div>
+                <p class="small">* Not to worry, no spam will be coming your way.</p>
+                <div class="icons">
+                    <div class="icon">
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <img src="../img/chair.png" alt="">
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
