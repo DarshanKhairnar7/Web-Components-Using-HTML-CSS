@@ -20,6 +20,7 @@ html{
 }
 .container header{
     position: relative;
+    background-color: #33353a;
 }
 .container header nav{
     display: flex;
@@ -55,6 +56,10 @@ html{
     color: var(--text-light);
 }
 
+/* .container main{
+    background-color: var(--text-light);
+    color: var(--bg-dark);
+} */
 .container main .banner{
     display: flex;
     justify-content: center;
